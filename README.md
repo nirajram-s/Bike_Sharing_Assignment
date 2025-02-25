@@ -8,3 +8,26 @@ They have contracted a consulting company to understand the factors on which the
 
 Which variables are significant in predicting the demand for shared bikes.
 How well those variables describe the bike demands
+
+## Conclusions
+- Number of Final Parameters 7
+- Parameters : temp, yr, winter, Light_Snowrain,Sprint,holiday, Misty
+- Train R^2 :0.808 - Train Adjusted R^2 :0.806
+- Test R^2 :0.806 - Test Adjusted R^2 :0.7996
+
+Thus we can conclude that model is fairly good and generalize various datasets and can be written as shown below
+- Train R^2 and Test R^2 are almost same, similart Train Adjusted R^2 and Test Adjusted R^2 are also very close to each other
+- So trained model is working with similar accuracy in test model as well
+- We have reduced the number of Parameters to 7 by using RFE, p Value, VIF and our Business knowledge
+cnt = 0.2082 + (temp * 0.4442) + (yr * 0.2338) + (winter * 0.0534) - (Light_snowrain * 0.2949) - (Spring * 0.1204) - (Holiday * 0.0906) - (Misty * 0.0727)
+
+Year, Temperature, Summer, Winter, September have positive effect on the count of rental bikes
+- Temperature - 0.4442
+- Year - 0.2338
+- Winter - 0.0534
+
+Holiday, Windspeed, Spring, Light_snowrain and Misty have negative effect on the count of rental bikes
+- Light_snowrain - -0.2949
+- Spring - -0.1204
+- Holiday - -0.0906
+Misty - -0.0727
